@@ -14,7 +14,7 @@ There are other sources to read rate.
 
 ### Technologies
 
-I am using NextJs for this project.
+I am using Next.js for this project.
 
 ### Endpoints
 
