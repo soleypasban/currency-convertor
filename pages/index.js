@@ -1,26 +1,33 @@
 import { getAllAPIs } from '../endpoint'
+import './style.css'
 
 const whereAmI = () => {
     return (typeof window !== 'undefined' && window.document) ? 'client' : 'server';
 };
 
 const Index = ({ revolut, ccapi, europa }) => (
-    <div>
-        <h1>Revolut</h1>
-        <div>1.00 {revolut.from} equals to {revolut.to} {revolut.rate}</div>
-        <hr />
-        <h1>European Central Bank</h1>
-        <div>1.00 {europa.from} equals to {europa.to} {europa.rate}</div>
-        <hr />
-        <h1>Currency Converter API</h1>
-        <div>1.00 {ccapi.from} equals to {ccapi.to} {ccapi.rate}</div>
-        <hr />
-        <p>This script has loaded from {whereAmI()}</p>
-    </div>
+    <>
+        <div className="title">USD to EUR</div>
+        <div className="cards">
+            <div className="card">
+                <div className="provider">Revolut<br />Card</div>
+                <div className="rate">{Number(revolut.rate).toFixed(4)}</div>
+            </div>
+            <div class="card">
+                <div className="provider">European<br />Central Bank</div>
+                <div className="rate">{Number(europa.rate).toFixed(4)}</div>
+            </div>
+            <div class="card">
+                <div className="provider">Currency<br />Converter API</div>
+                <div className="rate">{Number(ccapi.rate).toFixed(4)}</div>
+            </div>
+        </div>
+        <p className="info">This script has loaded from <b>{whereAmI()}</b> side</p>
+    </>
 );
 
 Index.getInitialProps = async function () {
     return await getAllAPIs()
 }
 
-export default Index;
+export default Index
