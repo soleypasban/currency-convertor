@@ -4,9 +4,9 @@ I wanted to have some kind of alert system to be notified when the rate is at so
 
 I am using Revolut data from https://revolut.com for this.
 
-### Other sources
+### Resources
 
-There are other sources to read rate.
+Here are resources to read rate.
 
 - Revolut - free
 - European Central Bank (ECB) - free
