@@ -14,4 +14,4 @@ There are other sources to read rate.
 
 ### Technologies
 
-I am using NodeJs, and plain HTML for now.
+I am using NextJs for this project.
